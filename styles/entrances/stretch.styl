@@ -1,0 +1,35 @@
+@require '../variables'
+
+@keyframes stretch {
+  0% {
+    transform: scaleY(0)
+  }
+  40% {
+    transform: scaleY($saf-stretch-compress-exageration)
+  }
+  60% {
+    transform: scaleY($saf-stretch-compress-exageration - ($saf-stretch-compress-exageration * .075))
+  }
+  80% {
+    transform: scaleY($saf-stretch-compress-exageration)
+  }
+  100% {
+    transform: scaleY($saf-stretch-compress-exageration - ($saf-stretch-compress-exageration * .075))
+  }
+  80% {
+    transform: scaleY($saf-stretch-compress-exageration - ($saf-stretch-compress-exageration * .025))
+  }
+  100% {
+    transform: scaleY(1)
+  }
+}
+
+stretchUp($duration = 1.75s, $delay = 0s, $count = 1, $fill-mode = both, $timing = ease-out) {
+  animation: stretch $count $duration $delay $fill-mode $timing
+  transform-origin: 0 100%
+}
+
+stretchDown($duration = 1.75s, $delay = 0s, $count = 1, $fill-mode = both, $timing = ease-out) {
+  animation: stretch $count $duration $delay $fill-mode $timing
+  transform-origin: 0 0
+}

@@ -1,0 +1,20 @@
+@require '../variables'
+
+@keyframes fadeOutZoomBig {
+  0% {
+    transform: scale(1) translateZ(0)
+  }
+  40% {
+    transform: scale(1.25)
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0)
+  }
+}
+
+fadeOutZoomBig($duration = 1s, $delay = 0s, $fill-mode = forwards)
+  animation: fadeOutZoomBig $duration $delay $fill-mode

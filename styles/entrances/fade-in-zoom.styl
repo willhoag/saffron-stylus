@@ -1,0 +1,15 @@
+@require '../variables'
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateZ(0)
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+fadeInZoom($duration = 1s, $delay = 0s, $fill-mode = forwards)
+  animation: fadeInZoom $duration $delay $fill-mode

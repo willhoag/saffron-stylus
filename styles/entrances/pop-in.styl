@@ -1,0 +1,15 @@
+@require '../variables'
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.25) translateZ(0)
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+popIn($duration = 0.5s, $delay = 0s, $fill-mode = forwards)
+  animation: popIn $duration $delay $fill-mode

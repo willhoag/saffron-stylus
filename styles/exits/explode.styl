@@ -1,0 +1,15 @@
+@keyframes explode {
+  0% {
+    opacity: 1;
+    transform: translateZ(0)
+@require '../variables'
+
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5)
+  }
+}
+
+explode($duration = 0.5s, $delay = 0s, $fill-mode = forwards)
+  animation: explode $duration $delay $fill-mode

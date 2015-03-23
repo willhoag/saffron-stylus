@@ -1,0 +1,14 @@
+@require '../variables'
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY($saf-translateY-distance * -1) translateZ(0)
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+fadeInDown($duration = 1s, $delay = 0s, $fill-mode = forwards)
+  animation: fadeInDown $duration $delay $fill-mode

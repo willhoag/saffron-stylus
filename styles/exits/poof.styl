@@ -1,0 +1,17 @@
+@require '../variables'
+
+@keyframes poof {
+  0% {
+    opacity: 1;
+    transform: scale(1)
+    -webkit-filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2)
+    -webkit-filter: blur(40px);
+  }
+}
+
+poof($duration = 0.85s, $delay = 0s, $fill-mode = forwards)
+  animation: poof $duration $delay $fill-mode

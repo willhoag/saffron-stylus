@@ -1,0 +1,55 @@
+@require '../variables'
+
+cubeFlipUp($selector = ".flipUp", $duration = 0.5s, $delay = 0s, $timing = cubic-bezier(0.905, -0.19, 0.48, 0.995))
+ position: relative;
+ transform-style: preserve-3d
+ transition: all $duration $delay $timing
+ &{$selector} {
+   transform: rotateX(-90deg) translateY(100%) translateZ(0)
+   transform-origin: 50% 100%
+ }
+ &::before,
+ &::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   height: 100%;
+   width: 100%;
+ }
+ &::before {
+   top: 100%;
+   transform: rotateX(-90deg)
+   transform-origin: 0 0
+ }
+ &::after {
+   top: -100%;
+   transform: rotateX(90deg)
+   transform-origin: 0 100%
+ }
+
+cubeFlipDown($selector = ".flipDown", $duration = 0.5s, $delay = 0s, $timing = cubic-bezier(0.905, -0.19, 0.48, 0.995))
+ position: relative;
+ transform-style: preserve-3d
+ transition: all $duration $delay $timing
+ &{$selector} {
+   transform: rotateX(90deg) translateY(-100%) translateZ(0)
+   transform-origin: 50% 0
+ }
+ &::before,
+ &::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   height: 100%;
+   width: 100%;
+ }
+ &::before {
+   top: 100%;
+   transform: rotateX(-90deg)
+   transform-origin: 0 0
+ }
+ &::after {
+   top: -100%;
+   transform: rotateX(90deg)
+   transform-origin: 0 100%
+ }

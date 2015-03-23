@@ -1,0 +1,19 @@
+@require '../variables'
+
+flip($selector = ".flipped", $duration = 0.5s, $delay = 0s, $fill-mode = both, $count = 1, $timing = ease-in)
+   position: relative;
+   transform-style: preserve-3d
+   transition: all $duration $delay $timing;
+   backface-visibility: hidden
+   &{$selector} {
+      transform: rotateY(180deg)translateZ(0)
+   }
+   &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      backface-visibility: inherit
+      transform: rotateY(180deg)
+   }

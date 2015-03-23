@@ -1,0 +1,18 @@
+@require '../variables'
+
+@keyframes hover {
+  0%, 50%, 100% {
+    transform: translateY($saf-hover-bob-distance * -1) translateZ(0)
+  }
+  25% {
+    transform: translateY($saf-hover-bob-distance) rotate($saf-hover-bob-angle)
+  }
+  75% {
+    transform: translateY($saf-hover-bob-distance) rotate($saf-hover-bob-angle * -1)
+  }
+}
+
+hover($duration = 5s, $delay = 0s, $fill-mode = none, $count = infinite, $timing = ease-in-out)
+  // hack to fix jagged edges
+  outline: 1px solid transparent
+  animation: hover $count $duration $delay $fill-mode $timing

@@ -1,0 +1,14 @@
+@require '../variables'
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateZ(0)
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+fadeIn($duration = 1s, $delay = 0s, $fill-mode = forwards)
+  animation: fadeIn $duration $delay $fill-mode

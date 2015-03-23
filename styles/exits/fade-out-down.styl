@@ -1,0 +1,15 @@
+@require '../variables'
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: translateZ(0)
+  }
+  100% {
+    opacity: 0;
+    transform: translateY($saf-translateY-distance)
+  }
+}
+
+fadeOutDown($duration = 1s, $delay = 0s, $fill-mode = forwards)
+  animation: fadeOutDown $duration $delay $fill-mode

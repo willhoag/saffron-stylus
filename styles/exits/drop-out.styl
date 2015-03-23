@@ -1,0 +1,15 @@
+@require '../variables'
+
+@keyframes dropOut {
+  0% {
+    opacity: 1;
+    transform: translateZ(0)
+  }
+  100% {
+    opacity: 0;
+    transform: translateY($saf-drop-rise-distance) rotate(-40deg)
+  }
+}
+
+dropOut($duration = 0.5s, $delay = 0s, $fill-mode = forwards)
+  animation: dropOut $duration $delay $fill-mode

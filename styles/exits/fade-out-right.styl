@@ -1,0 +1,14 @@
+@require '../variables'
+
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX($saf-translateX-distance) translateZ(0)
+  }
+}
+
+fadeOutRight($duration = 1s, $delay = 0s, $fill-mode = forwards)
+  animation: fadeOutRight $duration $delay $fill-mode

@@ -1,0 +1,20 @@
+@require '../variables'
+
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY($saf-drop-rise-distance * -1) rotate(0) translateZ(0)
+  }
+  10% {
+    transform: translateY($saf-drop-rise-distance * -1) rotate(-40deg)
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(0)
+  }
+}
+
+dropIn($duration = 0.5s, $delay = 0s, $fill-mode = forwards)
+  animation: dropIn $duration $delay $fill-mode

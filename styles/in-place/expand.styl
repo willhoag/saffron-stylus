@@ -1,0 +1,6 @@
+@require '../variables'
+
+expand($direction, $amount = 1em, $selector = ":hover", $duration = 0.5s, $delay = 0s, $timing = cubic-bezier(0.68, -0.55, 0.275, 1.465))
+  transition: "padding-%s" % $direction $duration $delay $timing
+  &{$selector}
+    padding-{$direction}: $amount

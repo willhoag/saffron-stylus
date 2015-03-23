@@ -1,0 +1,24 @@
+@require '../variables'
+
+@keyframes compress {
+  0% {
+    transform: scaleY(1) translateZ(0)
+  }
+  30% {
+    transform: scaleY($saf-stretch-compress-exageration)
+  }
+  50% {
+    transform: scaleY($saf-stretch-compress-exageration - ($saf-stretch-compress-exageration * .075))
+  }
+  100% {
+    transform: scaleY(0)
+  }
+}
+
+compressUp($duration = 0.7s, $delay = 0s, $count = 1, $fill-mode = both, $timing = ease-out)
+  animation: compress $count $duration $delay $fill-mode $timing
+  transform-origin: 0 0
+
+compressDown($duration = 0.7s, $delay = 0s, $count = 1, $fill-mode = both, $timing = ease-out)
+  animation: compress $count $duration $delay $fill-mode $timing
+  transform-origin: 0 100%

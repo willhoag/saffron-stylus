@@ -1,0 +1,14 @@
+@require '../variables'
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX($saf-translateX-distance * -1) translateZ(0)
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+fadeInLeft($duration = 1s, $delay = 0s, $fill-mode = forwards)
+  animation: fadeInLeft $duration $delay $fill-mode

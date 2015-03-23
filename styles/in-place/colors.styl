@@ -1,0 +1,19 @@
+@require '../variables'
+
+backgroundColor($from, $to, $selector = ":hover", $duration = 1.5s, $delay = 0s)
+  background-color: $from
+  transition: background-color $duration $delay
+  &{$selector}
+    background-color: $to
+
+borderColor($from, $to, $selector = ":hover", $duration = 1.5s, $delay = 0s)
+  border-color: $from
+  transition: border-color $duration $delay
+  &{$selector}
+    border-color: $to
+
+color($from, $to, $selector = ":hover", $duration = 1.5s, $delay = 0s)
+  color: $from
+  transition: color $duration $delay
+  &{$selector}
+    color: $to

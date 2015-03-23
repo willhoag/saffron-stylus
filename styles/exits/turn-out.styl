@@ -1,0 +1,33 @@
+@require '../variables'
+
+@keyframes turnOutDown {
+  0% {
+    opacity: 1;
+    transform: perspective(800px) rotateX(0deg) translateZ(0)
+    backface-visibility: hidden
+  }
+
+  100% {
+    opacity: 0;
+    transform: perspective(500px) rotateX($saf-turn-angle * -1) translateZ(150px)
+  }
+}
+
+turnOutDown($duration = 1s, $delay = 0s, $fill-mode = forwards)
+  animation: turnOutDown $duration $delay $fill-mode
+
+@include keyframes(turnOutUp) {
+  0% {
+    opacity: 1;
+    transform: perspective(800px) rotateX(0deg) translateZ(0)
+    backface-visibility: hidden
+  }
+
+  100% {
+    opacity: 0;
+    transform: perspective(500px) rotateX($saf-turn-angle) translateZ(150px)
+  }
+}
+
+turnOutUp($duration = 1s, $delay = 0s, $fill-mode = forwards)
+  animation: turnOutUp $duration $delay $fill-mode

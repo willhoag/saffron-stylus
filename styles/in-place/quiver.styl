@@ -1,0 +1,43 @@
+@require '../variables'
+
+@keyframes quiver {
+  0%{
+    transform: translate3d(2px, 1px, 0) rotate(0deg)
+  }
+  10% {
+    transform: translate3d(-1px, 2px, 0) rotate($saf-quiver-angle)
+  }
+  20% {
+    transform: translate3d(-3px, 0) rotate($saf-quiver-angle * -1)
+  }
+  30% {
+    transform: translate3d(0, 2px, 0) rotate(0deg)
+  }
+  40% {
+    transform: translate3d(1px, -1px, 0) rotate($saf-quiver-angle)
+  }
+  50% {
+    transform: translate3d(-1px, 2px, 0) rotate($saf-quiver-angle * -1)
+  }
+  60% {
+    transform: translate3d(-3px, 1px, 0) rotate(0deg)
+  }
+  70% {
+    transform: translate3d(2px, 1px, 0) rotate($saf-quiver-angle)
+  }
+  80% {
+    transform: translate3d(-1px, -1px, 0) rotate($saf-quiver-angle * -1)
+  }
+  90% {
+    transform: translate3d(2px, 2px, 0) rotate(0deg)
+  }
+  100% {
+    transform: translate3d(1px, -2px, 0) rotate($saf-quiver-angle)
+  }
+
+}
+
+quiver($duration = 0.75s, $delay = 0s, $fill-mode = none, $count = infinite)
+  // hack to fix jagged edges
+  outline: 1px solid transparent
+  animation: quiver $duration $delay $fill-mode $count

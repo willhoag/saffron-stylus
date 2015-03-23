@@ -1,0 +1,25 @@
+@require '../variables'
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0) translateZ(0)
+  }
+  15% {
+    transform: translateX($saf-shake-distance)
+  }
+  35% {
+    transform: translateX($saf-shake-distance * -1)
+  }
+  50% {
+    transform: translateX($saf-shake-distance / 2)
+  }
+  65% {
+    transform: translateX($saf-shake-distance / 2 * -1)
+  }
+  85% {
+    transform: translateX($saf-shake-distance / 3)
+  }
+}
+
+shake($duration = 0.5s, $delay = 0s, $fill-mode = none, $count = 1)
+  animation: shake $duration $delay $fill-mode $count
