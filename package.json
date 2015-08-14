@@ -1,7 +1,7 @@
 {
   "name": "saffron-stylus",
   "description": "A simple Stylus mixin library for animations and transitions",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "willhoag <dev@willhoag.com>",
   "bugs": "https://github.com/willhoag/saffron-stylus/issues",
   "homepage": "http://colindresj.github.io/saffron/",
